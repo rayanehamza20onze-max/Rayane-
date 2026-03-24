@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposé : La Révolution ChatGPT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-overlay">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="Logo ChatGPT" class="header-logo">
+            <h1>La Révolution ChatGPT</h1>
+            <p class="subtitle">Par Rayane, Selim et Antoine</p>
+            <div class="header-decoration"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="cards-grid">
+            
+            <div class="card" onclick="openModal('intro-modal')">
+                <div class="card-icon">📖</div>
+                <h3>1. Introduction et Histoire</h3>
+                <p>Découvrez les origines d'OpenAI et l'ascension fulgurante de l'IA.</p>
+                <span class="card-btn">Lire la suite</span>
+            </div>
+
+            <div class="card" onclick="openModal('tech-modal')">
+                <div class="card-icon">⚙️</div>
+                <h3>2. Fonctionnement technique</h3>
+                <p>Comprendre l'architecture Transformer et le calcul statistique.</p>
+                <span class="card-btn">Explorer</span>
+            </div>
+
+            <div class="card" onclick="openModal('stats-modal')">
+                <div class="card-icon">📊</div>
+                <h3>3. Statistiques Clés</h3>
+                <p>Les chiffres records : utilisateurs, puissance et environnement.</p>
+                <span class="card-btn">Voir les chiffres</span>
+            </div>
+
+            <div class="card" onclick="openModal('limites-modal')">
+                <div class="card-icon">🔍</div>
+                <h3>4. Limites et Apprentissage</h3>
+                <p>Hallucinations, triche et l'art de bien prompter.</p>
+                <span class="card-btn">Détails</span>
+            </div>
+
+            <div class="card" onclick="openModal('enjeux-modal')">
+                <div class="card-icon">🛡️</div>
+                <h3>5. Enjeux et Éthique</h3>
+                <p>L'impact sur la société, le travail et l'environnement.</p>
+                <span class="card-btn">S'informer</span>
+            </div>
+
+            <div class="card quiz-card" onclick="openModal('quiz-modal')">
+                <div class="card-icon">❓</div>
+                <h3>Quiz Interactif</h3>
+                <p>Testez vos connaissances sur l'intelligence artificielle !</p>
+                <span class="card-btn">Lancer le défi</span>
+            </div>
+
+        </section>
+
+        <!-- MODALE 1 : INTRODUCTION -->
+        <div id="intro-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('intro-modal')">&times;</span>
+                <h2 class="modal-title">1. Introduction et Histoire</h2>
+                <div class="modal-body">
+                    <p>ChatGPT est un modèle de langage révolutionnaire lancé le 30 novembre 2022. En seulement deux mois, il a atteint les <strong>100 millions d'utilisateurs</strong>, une première mondiale.</p>
+                    <p>Fondée en 2015, la société <strong>OpenAI</strong> avait pour mission de rendre l'IA accessible à tous. Sous l'impulsion de Sam Altman, le projet est passé d'un laboratoire de recherche à une plateforme utilisée par des millions de personnes chaque jour.</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/oQpfXFB9AKs" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODALE 2 : TECHNIQUE -->
+        <div id="tech-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('tech-modal')">&times;</span>
+                <h2 class="modal-title">2. Fonctionnement Technique</h2>
+                <div class="modal-body">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Transformer_full.png/500px-Transformer_full.png" class="feature-img" alt="Architecture Transformer">
+                    <p>ChatGPT repose sur l'architecture <strong>Transformer</strong>. Il utilise des probabilités pour deviner le mot suivant. Il ne "pense" pas, il calcule la suite la plus logique à partir de milliards d'exemples.</p>
+                    <p>Il a été entraîné sur une infrastructure de serveurs géante utilisant des milliers de GPU Nvidia, permettant de traiter des téraoctets de données textuelles en un temps record.</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/7ell8KEbhJo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODALE 3 : STATISTIQUES -->
+        <div id="stats-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('stats-modal')">&times;</span>
+                <h2 class="modal-title">3. Statistiques et Records</h2>
+                <div class="modal-body">
+                    <div class="stats-grid">
+                        <div class="stat-box"><h4>5 Jours</h4><p>Pour atteindre 1 million d'utilisateurs</p></div>
+                        <div class="stat-box"><h4>175 Mds</h4><p>De paramètres pour GPT-3</p></div>
+                        <div class="stat-box"><h4>500 ml</h4><p>D'eau par conversation (refroidissement)</p></div>
+                    </div>
+                    <p><strong>Comparaison de l'adoption mondiale :</strong></p>
+                    <table class="data-table">
+                        <thead><tr><th>Service</th><th>Temps pour 100M d'utilisateurs</th></tr></thead>
+                        <tbody>
+                            <tr><td>Netflix</td><td>10 ans</td></tr>
+                            <tr><td>Instagram</td><td>2,5 ans</td></tr>
+                            <tr><td>TikTok</td><td>9 mois</td></tr>
+                            <tr class="highlight"><td>ChatGPT</td><td>2 mois</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODALE 4 : LIMITES -->
+        <div id="limites-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('limites-modal')">&times;</span>
+                <h2 class="modal-title">4. Limites et Hallucinations</h2>
+                <div class="modal-body">
+                    <p>L'une des limites majeures est l'<strong>hallucination</strong>. L'IA peut inventer des faits avec une certitude absolue si elle ne trouve pas la réponse exacte dans ses données.</p>
+                    <p>Le <strong>Prompting</strong> est devenu une compétence : savoir poser la bonne question pour éviter les erreurs et obtenir un résultat précis et utile pour les élèves et professionnels.</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/RKtR-lSOq2g" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODALE 5 : ENJEUX -->
+        <div id="enjeux-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('enjeux-modal')">&times;</span>
+                <h2 class="modal-title">5. Enjeux et Éthique</h2>
+                <div class="modal-body">
+                    <p>L'IA pose des questions sur l'emploi, la désinformation (Deepfakes) et la protection des données personnelles.</p>
+                    <p>L'enjeu écologique est aussi crucial : les centres de données consomment énormément d'électricité et d'eau pour fonctionner 24h/24.</p>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/S_8qM9vL7iQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODALE 6 : QUIZ -->
+        <div id="quiz-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('quiz-modal')">&times;</span>
+                <h2 class="modal-title">🎯 Quiz Interactif</h2>
+                
+                <div id="quiz-container">
+                    <div id="quiz-header">
+                        <p id="question">Prêt pour le test ?</p>
+                    </div>
+                    
+                    <div id="options-container">
+                        <!-- Les boutons de réponse seront générés ici par JavaScript -->
+                    </div>
+                    
+                    <div id="quiz-footer">
+                        <p id="score-display">Score: 0/9</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Exposé SNT - Rayane, Selim & Antoine. Projet réalisé avec passion.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
